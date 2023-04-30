@@ -1,5 +1,5 @@
 FROM debian
-RUN apt update && apt upgrade
+RUN apt update -y && apt upgrade -y
 RUN DEBIAN_FRONTEND=noninteractive apt install ssh wget npm vim curl git nginx  -y
 RUN echo '/usr/sbin/sshd -D' >>/luo.sh
 RUN echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
